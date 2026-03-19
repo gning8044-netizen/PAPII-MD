@@ -1,225 +1,159 @@
-# 🌹 PAPII-MD 🌹
+# DEV SHADOW
+<!-- EN-TÊTE SUPERBE -->
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=30&duration=3000&pause=1000&color=00F7F7&center=true&vCenter=true&width=435&lines=🤖+DEV+SHADOW+BOT;⚡+150+COMMANDES;🔥+WHATSAPP+BOT;💫+PREMIUM+BOT" alt="Typing SVG" />
+</p>
 
-This is a WhatsApp bot built using the Baileys library for group management, including features like tagging all members, muting/unmuting, and many more. It's designed to help admins efficiently manage WhatsApp groups.
+<p align="center">
+  <img src="https://i.imgur.com/dBaSKWF.gif" height="30" width="100%">
+</p>
 
-<div align="center"> 
-  <a href="https://git.io/typing-svg"> 
-    <img src="https://readme-typing-svg.demolab.com?font=Ribeye&size=50&pause=1000&color=33ff00&center=true&width=910&height=100&lines=Knight-Bot;Multi+Device+Whatsapp+Bot;Coded+By+Professor" alt="Typing SVG" />
-  </a> 
-</div> 
-
-<div align="center"> 
-  <a href="https://youtube.com/@mr_unique_hacker"> 
-    <img src="https://github.com/mruniquehacker/Knightbot-MD/blob/main/assets/bot_image.jpg" alt="Knight Bot" height="300"> 
-  </a> 
-</div>
-
-<div align="center">
-  <img src="https://img.shields.io/github/followers/mruniquehacker?style=for-the-badge&label=Followers" alt="Followers"/>
-  <img src="https://img.shields.io/github/stars/mruniquehacker/Knightbot-MD?style=for-the-badge&label=Stars" alt="Stars"/>
-  <img src="https://img.shields.io/github/forks/mruniquehacker/Knightbot-MD?style=for-the-badge&label=Forks" alt="Forks"/>
-  <img src="https://img.shields.io/github/watchers/mruniquehacker/Knightbot-MD?style=for-the-badge&label=Watchers" alt="Watchers"/>
-</div>
-
----
-<div>
-  <a href="https://www.thordata.com/products/residential-proxies?ls=YouTube&lk=Knightbot" target="_blank">
-    <img src="assets/thor.png" alt="ThorData Proxies" width="100%" />
+<!-- BADGES MAGNIFIQUES -->
+<p align="center">
+  <a href="https://github.com/DevShadowTech">
+    <img src="https://img.shields.io/badge/Version-3.0.0-blue?style=for-the-badge&logo=github" alt="Version">
   </a>
-</div>
+  <a href="https://github.com/DevShadowTech">
+    <img src="https://img.shields.io/badge/Commandes-150+-brightgreen?style=for-the-badge&logo=whatsapp" alt="Commandes">
+  </a>
+  <a href="https://github.com/DevShadowTech">
+    <img src="https://img.shields.io/badge/Status-En%20ligne-success?style=for-the-badge&logo=statuspage" alt="Status">
+  </a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Node.js-20.x-green?style=for-the-badge&logo=nodedotjs" alt="Node.js">
+  <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge&logo=license" alt="License">
+  <img src="https://img.shields.io/badge/Platform-WhatsApp-25D366?style=for-the-badge&logo=whatsapp" alt="Platform">
+</p>
+
+<!-- BANNIÈRE SUPERBE -->
+<p align="center">
+  <img src="https://i.imgur.com/7I9H7qD.gif" width="100%">
+</p>
+
+<!-- TITRE PRINCIPAL -->
+<h1 align="center">
+  <img src="https://i.imgur.com/4pM9X8U.gif" width="30">
+  𝕯𝖊𝖛 𝕾𝖍𝖆𝖉𝖔𝖜 𝕿𝖊𝖈𝖍 - BOT WHATSAPP
+  <img src="https://i.imgur.com/4pM9X8U.gif" width="30">
+</h1>
+
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&duration=2000&pause=500&color=00F7F7&center=true&vCenter=true&width=600&lines=🔥+Le+bot+le+plus+puissant+du+Sénégal!;⚡+150+commandes+puissantes;🤖+IA+%7C+Téléchargements+%7C+Jeux;💫+100%25+gratuit+et+open+source" alt="Typing SVG" />
+</p>
+
+<!-- LIGNE DE SÉPARATION -->
+<p align="center">
+  <img src="https://i.imgur.com/dBaSKWF.gif" height="30" width="100%">
+</p>
+
+<!-- SECTION PRÉSENTATION -->
+<h2 align="center">
+  <img src="https://i.imgur.com/4pM9X8U.gif" width="25">
+  🌟 PRÉSENTATION DU BOT
+  <img src="https://i.imgur.com/4pM9X8U.gif" width="25">
+</h2>
+
+<p align="center">
+  <img src="https://i.imgur.com/Lk4v7s9.gif" width="300">
+</p>
+
+<table align="center">
+  <tr>
+    <td align="center" width="200">
+      <img src="https://i.imgur.com/8W7T8qQ.gif" width="100"><br>
+      <strong>🤖 150+ Commandes</strong>
+    </td>
+    <td align="center" width="200">
+      <img src="https://i.imgur.com/YKYq8qQ.gif" width="100"><br>
+      <strong>⚡ Ultra Rapide</strong>
+    </td>
+    <td align="center" width="200">
+      <img src="https://i.imgur.com/8m7T8qQ.gif" width="100"><br>
+      <strong>🔒 100% Sécurisé</strong>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="200">
+      <img src="https://i.imgur.com/9W7T8qQ.gif" width="100"><br>
+      <strong>🎮 Jeux Inclus</strong>
+    </td>
+    <td align="center" width="200">
+      <img src="https://i.imgur.com/0K7T8qQ.gif" width="100"><br>
+      <strong>📥 Téléchargements</strong>
+    </td>
+    <td align="center" width="200">
+      <img src="https://i.imgur.com/1L7T8qQ.gif" width="100"><br>
+      <strong>🤖 IA Intégrée</strong>
+    </td>
+  </tr>
+</table>
+
+<!-- LIGNE DE SÉPARATION -->
+<p align="center">
+  <img src="https://i.imgur.com/dBaSKWF.gif" height="30" width="100%">
+</p>
+
+<!-- SECTION FONCTIONNALITÉS -->
+<h2 align="center">
+  <img src="https://i.imgur.com/4pM9X8U.gif" width="25">
+  ⚡ FONCTIONNALITÉS INCROYABLES
+  <img src="https://i.imgur.com/4pM9X8U.gif" width="25">
+</h2>
+
+<p align="center">
+  <img src="https://i.imgur.com/Y2R7y8Q.gif" width="400">
+</p>
 
 <br>
 
-<div align="left">
-  <b>Thordata: Get Reliable Global Proxies at an Unbeatable Value.</b><br><br>
-  One-click data collection with enterprise-grade stability and compliance.<br>
-  Join thousands of developers using ThorData for high-scale operations.<br><br>
-  🎁 <b>Exclusive Offer:</b> Sign up for a free Residential Proxy trial and 2,000 <b>FREE SERP API calls!</b>
-</div>
+<details>
+<summary align="center"><b>📥 CLIQUE POUR VOIR TOUTES LES COMMANDES</b></summary>
+<br>
+
+| Catégorie | Commandes | Description |
+|:---------:|:---------:|:-----------:|
+| 🎵 **Téléchargements** | `.play`, `.yt`, `.tiktok`, `.ig`, `.fb` | Télécharge musiques et vidéos |
+| 🤖 **Intelligence Artificielle** | `.gpt`, `.gemini`, `.imagine`, `.ai` | Pose des questions à l'IA |
+| 🎨 **Stickers** | `.sticker`, `.toimg`, `.take`, `.qc` | Crée des stickers magnifiques |
+| 🎮 **Jeux** | `.tictactoe`, `.hangman`, `.trivia`, `.dice` | Amuse-toi avec des jeux |
+| 👥 **Groupes** | `.tagall`, `.kick`, `.promote`, `.mute` | Gère tes groupes |
+| 🛠️ **Outils** | `.weather`, `.translate`, `.qrcode` | Outils pratiques |
+| 📦 **Divers** | `.quote`, `.fact`, `.joke`, `.roast` | Pour se divertir |
+| 👑 **Owner** | `.mode`, `.restart`, `.broadcast` | Commandes réservées |
+
+</details>
 
 <br>
 
-<div align="left">
-  <a href="https://www.thordata.com/products/residential-proxies?ls=YouTube&lk=Knightbot" target="_blank">
-    <img src="https://img.shields.io/badge/Try now-28a745?style=for-the-badge" alt="Try now"/>
-  </a>
-</div>
+<!-- LIGNE DE SÉPARATION -->
+<p align="center">
+  <img src="https://i.imgur.com/dBaSKWF.gif" height="30" width="100%">
+</p>
 
+<!-- SECTION INSTALLATION -->
+<h2 align="center">
+  <img src="https://i.imgur.com/4pM9X8U.gif" width="25">
+  🚀 INSTALLATION FACILE
+  <img src="https://i.imgur.com/4pM9X8U.gif" width="25">
+</h2>
 
-## 🚀 Steps to Deploy Bot
+<p align="center">
+  <img src="https://i.imgur.com/3R7y8Q.gif" width="300">
+</p>
 
-### Step 1: Fork the Repository
+<br>
 
-Click the button below to fork the Knight Bot repository to your GitHub account:
+```bash
+# 1️⃣ Clone le repository
+git clone https://github.com/DevShadowTech/MonBot.git
 
-<div align="center">
-  <a href="https://github.com/mruniquehacker/Knightbot-MD/fork">
-    <img src="https://img.shields.io/badge/Fork-Repository-blue?style=for-the-badge" alt="Fork the repository"/>
-  </a>
-</div>
+# 2️⃣ Entre dans le dossier
+cd MonBot
 
----
+# 3️⃣ Installe les dépendances
+npm install
 
-### Step 2: Get Pair Code
-
-Deploy the bot and easily connect it to your WhatsApp account by pair code. Click the button below to deploy the bot on Replit.
-
-<div align="center">
-  <a href="https://knight-bot-paircode.onrender.com" target="_blank">
-    <img src="https://img.shields.io/badge/GET%20PAIR%20CODE-Easy%20Method-ff4d4d?style=for-the-badge" alt="Generate Pair Code"/>
-  </a>
-</div>
-
-
-### After getting creds.json file, upload it to session folder
-
----
-
-### Step 3: Deploy Now
-
-For further customization and setup guidance, click the button below:
-
-<div align="center">
-  <a href="https://youtu.be/-oz_u1iMgf8">
-    <img src="https://img.shields.io/badge/Deploy Tutorial-dc3545?style=for-the-badge&logo=youtube" alt="YouTube Link"/>
-  </a>
-  <a href="https://bot-hosting.net/?aff=1068419752923508776">
-    <img src="https://img.shields.io/badge/Deploy on Panel-28a745?style=for-the-badge" alt="Deploy on Panel"/>
-  </a>
-</div>
-
-### Deploy on VPS
-
-<div align="center">
-  <a href="https://client.petrosky.io/aff.php?aff=394" target="_blank">
-    <img src="https://img.shields.io/badge/petrosky vps-0078E7?style=for-the-badge" alt="petrosky vps"/>
-  </a>
-</div>
-
-### Deploy on Below Panel
-<div align="center">
-<a href="https://dashboard.katabump.com/auth/login#d6b7d6" target="_blank">
-  <img src="https://img.shields.io/badge/Katabump-D6B7D6?style=for-the-badge&logo=server&logoColor=black" alt="Katabump"/>
-</a>
-</div>
-
-### Join Us
-
-<div align="center">
-  <a href="https://t.me/+3QhFUZHx-nhhZmY1">
-    <img src="https://img.shields.io/badge/Join%20Telegram-0078E7?style=for-the-badge&logo=telegram&logoColor=white" alt="Join Telegram"/>
-  </a>
-  <a href="https://whatsapp.com/channel/0029Va90zAnIHphOuO8Msp3A">
-    <img src="https://img.shields.io/badge/Join%20WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="Join WhatsApp"/>
-  </a>
-</div>
-
----
-
-## ⚙️ Features
-
-- **Tag all group members** with the `.tagall` command
-- **Admin restricted usage** (Only group admins can use certain commands)
-- **Games** like Tic-Tac-Toe for interactive group engagement
-- **Text-to-Speech** with `.tts`
-- **Sticker creation** with `.sticker`
-- **Anti-link detection** for group safety
-- **Warn and manage group members** with admin control
-
----
-
-## 📖 About
-
-The Knight WhatsApp Bot assists group admins by providing them with tools to efficiently manage large WhatsApp groups. The bot uses the Baileys library to interact with the WhatsApp Web API and supports multi-device features.
-
-It is lightweight and can be easily customized to add more commands as per your requirements. The bot runs in a Node.js environment and provides QR code-based authentication to link your WhatsApp account.
-
----
-
-## 🛠️ Setup & Installation
-
-### Prerequisites
-
-- Node.js installed on your system
-- Git installed (for cloning the repository)
-
-### Step-by-Step Setup
-
-1. **Clone the repository:**
-
-    ```bash
-    git clone https://github.com/mruniquehacker/Knightbot-MD.git
-    cd Knightbot-MD
-    ```
-
-2. **Install the dependencies:**
-
-    ```bash
-    npm install
-    ```
-
-3. **Run the bot:**
-
-    ```bash
-    node index.js
-    ```
-
-4. **Scan the QR code:**
-
-    Once the bot starts, a QR code will appear in the terminal. Scan this QR code using the Linked Devices feature in WhatsApp to connect your WhatsApp account with the bot.
-
----
-
-
-## 📄 License
-
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT) - see the [LICENSE](https://github.com/mruniquehacker/Knightbot-MD/blob/main/LICENSE) file for details.
-
----
-
-## 🙌 Contributions
-
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/mruniquehacker/Knightbot-MD/issues).
-
----
-
-## 🌟 Show your support
-
-If you like this project, please give it a [⭐️ star on GitHub](https://github.com/mruniquehacker/Knightbot)!
-
-
-## Credits
-
-- [Professor](https://github.com/mruniquehacker)
-- [Baileys](https://github.com/adiwajshing/Baileys)
-- [TechGod143](https://github.com/TechGod143) for pair code
-- [Dgxeon](https://github.com/Dgxeon) for pair code
-
----
-
-## ⚠️ Important Warning
-
-**Note:** This bot is created for educational purposes only. This is NOT an official WhatsApp bot. Using this bot may lead to your WhatsApp account being banned. Use it at your own risk. The developers will not be responsible for any consequences or account bans that may occur while using this bot.
-
-## 📝 Legal
-
-- This project is not affiliated with, authorized, maintained, sponsored or endorsed by WhatsApp or any of its affiliates or subsidiaries.
-- This is an independent and unofficial software. Use at your own risk.
-- Do not spam people with this bot.
-- Do not use this bot to send bulk messages or for illegal purposes.
-- The developers assume no liability and are not responsible for any misuse or damage caused by this program.
-
-### License
-This project is licensed under the MIT License. However, you must:
-- Use this software in compliance with all applicable laws and regulations
-- Include original license and copyright notices
-- Credit original authors
-- Not use for spam or malicious purposes
-
-## 📜 Copyright Notice
-
-Copyright (c) 2024 Professor. All rights reserved.
-
-This project contains code from various open source projects:
-- Baileys (MIT License)
-- Other libraries as listed in package.json
+# 4️⃣ Lance le bot
+npm start
