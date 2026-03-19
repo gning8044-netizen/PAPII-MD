@@ -1,7 +1,7 @@
 {
-  "name": "mon-bot",
-  "version": "1.0.0",
-  "description": "Mon bot WhatsApp",
+  "name": "dev-shadow-bot",
+  "version": "3.0.0",
+  "description": "Bot WhatsApp 150 commandes",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
