@@ -9,7 +9,7 @@ async function menuCommand(sock, chatId, message) {
     // Animation typing
     try {
         await sock.sendPresenceUpdate('composing', chatId);
-        await sock.sendMessage(chatId, { text: "⏳ *∘̥⃟☠️𓊈𝐄𝐌𝐏𝐈𝐑𝐄『𝐊𝐈𝐋𝐋𝐄𝐑』𓊉☠️ ∘̥⃟ THE BEST🏆 Loading menu…*" });
+        await sock.sendMessage(chatId, { text: "⏳ *∘̥⃟☠️𓊈𝐃𝐄𝐕 𝐒𝐇𝐀𝐃𝐎𝐖『𝐓𝐄𝐂𝐇』𓊉☠️ ∘̥⃟ THE BEST🏆 Loading menu…*" });
         await new Promise(resolve => setTimeout(resolve, 1800));
         await sock.sendPresenceUpdate('paused', chatId);
     } catch {}
@@ -17,17 +17,17 @@ async function menuCommand(sock, chatId, message) {
 let botMode = settings.self === true ? 'PRIVÉ' : 'PUBLIC';
     // Message du menu
     const helpMessage = `
- ▛▀▜ ✦ 🩸𝐊𝚰𝐋𝐋𝚵𝚪–MD•V3🩸 ✦ ▙▀▟
+ ▛▀▜ ✦ 🩸𝐃𝐄𝐕 𝐒𝐇𝐀𝐃𝐎𝐖 𝐓𝐄𝐂𝐇–MD•V3🩸 ✦ ▙▀▟
 ╔──────────────────╗
-│ • BOT ID   : KILLER MD  
+│ • BOT ID   : DEV SHADOW MD  
 │ • VERSION  : 3.0.1  
-│ • DEV      : MUZAN TECH™  
+│ • DEV      : SHADOW TECH™  
 │ • USER     : ${userName}  
 │ • STATUS   : ACTIVE  
 │ • MODE     : ${botMode}  
 ╚──────────────────╝
 
-彡━━ ࿇ SYSTEM KILLER ━彡
+彡━━ ࿇ SYSTEM SHADOW ━彡
 │ • .menu
 │ • .ping
 │ • .alive
@@ -157,8 +157,8 @@ let botMode = settings.self === true ? 'PRIVÉ' : 'PUBLIC';
 │ • .comrade
 │ • .gay
 ┗━━━━━━━━━━━━━━━━━━━
-│   ࿇ 𝚃𝙷𝙴 𝐊𝚰𝐋𝐋𝚵𝚪 𝙲𝙻𝙰𝙽 ࿇
-│      ©  BY MUZAN TECH™  
+│   ࿇ 𝚃𝙷𝙴 DEV SHADOW TECH ࿇
+│      ©  BY DEV SHADOW TECH™  
 ┗━━━━━━━━━━━━━━━━━━┛
 `;
 
