@@ -1,13 +1,13 @@
 /**
- * DEV SHADOW TECH-MD - Un Bot WhatsApp
+ * KILLER-MD - Un Bot WhatsApp
  * Version : 3.0.0
- * Copyright (c) 2026 DEV SHADOW TECH
+ * Copyright (c) 2026 MR_MUZAN_TECH
  * 
  * ⚠️ Toute modification, redistribution ou utilisation sans autorisation explicite 
- * de DEV SHADOW TECH est strictement interdite.
+ * de l'auteur est strictement interdite.
  * Pour contact : +221769469119
  *
- * Ce programme est protégé et reste la propriété exclusive de DEV SHADOW TECH ™
+ * Ce programme est protégé et reste la propriété exclusive de MUZAN TECH ™
  */
 require('./settings')
 const { Boom } = require('@hapi/boom')
@@ -37,7 +37,7 @@ const {
     delay
 } = require("@whiskeysockets/baileys")
 const NodeCache = require("node-cache")
-// Utilisation d’un store léger persistant au lieu de makeInMemoryStore (compatibilité entre versions) // DEV SHADOW TECH ™
+// Utilisation d’un store léger persistant au lieu de makeInMemoryStore (compatibilité entre versions) // MUZAN TECH ™
 const pino = require("pino")
 const readline = require("readline")
 const { parsePhoneNumber } = require("libphonenumber-js")
@@ -45,46 +45,46 @@ const { PHONENUMBER_MCC } = require('@whiskeysockets/baileys/lib/Utils/generics'
 const { rmSync, existsSync } = require('fs')
 const { join } = require('path')
 
-// Importation du store léger // DEV SHADOW TECH ™
+// Importation du store léger // MUZAN TECH ™
 const store = require('./lib/lightweight_store')
 
-// Initialisation du store // DEV SHADOW TECH ™
+// Initialisation du store // MUZAN TECH ™
 store.readFromFile()
 const settings = require('./settings')
 setInterval(() => store.writeToFile(), settings.storeWriteInterval || 10000)
 
-// Optimisation mémoire - Forcer le garbage collection si disponible // DEV SHADOW TECH ™
+// Optimisation mémoire - Forcer le garbage collection si disponible // MUZAN TECH ™
 setInterval(() => {
     if (global.gc) {
         global.gc()
-        console.log('🧹 Nettoyage mémoire effectué') // DEV SHADOW TECH ™
+        console.log('🧹 Nettoyage mémoire effectué') // MUZAN TECH ™
     }
 }, 60_000) // toutes les 1 minute
 
-// Surveillance mémoire - Redémarrer si RAM trop élevée // DEV SHADOW TECH ™
+// Surveillance mémoire - Redémarrer si RAM trop élevée // MUZAN TECH ™
 setInterval(() => {
     const used = process.memoryUsage().rss / 1024 / 1024
     if (used > 400) {
-        console.log('⚠️ RAM trop élevée (>400MB), redémarrage du bot...') // DEV SHADOW TECH ™
-        process.exit(1) // Le panel redémarrera automatiquement // DEV SHADOW TECH ™
+        console.log('⚠️ RAM trop élevée (>400MB), redémarrage du bot...') // MUZAN TECH ™
+        process.exit(1) // Le panel redémarrera automatiquement // MUZAN TECH ™
     }
 }, 30_000) // vérifier toutes les 30 secondes
 
 let phoneNumber = "221769469119"
 let owner = JSON.parse(fs.readFileSync('./data/owner.json'))
 
-global.botname = "DEV SHADOW TECH BOT"
+global.botname = "KILLER BOT"
 global.themeemoji = "•"
 const pairingCode = !!phoneNumber || process.argv.includes("--pairing-code")
 const useMobile = process.argv.includes("--mobile")
 
-// Créer l'interface readline uniquement si l'environnement est interactif // DEV SHADOW TECH ™
+// Créer l'interface readline uniquement si l'environnement est interactif // MUZAN TECH ™
 const rl = process.stdin.isTTY ? readline.createInterface({ input: process.stdin, output: process.stdout }) : null
 const question = (text) => {
     if (rl) {
         return new Promise((resolve) => rl.question(text, resolve))
     } else {
-        // Dans un environnement non interactif, utiliser ownerNumber depuis settings // DEV SHADOW TECH ™
+        // Dans un environnement non interactif, utiliser ownerNumber depuis settings // MUZAN TECH ™
         return Promise.resolve(settings.ownerNumber || phoneNumber)
     }
 }
@@ -119,12 +119,12 @@ async function startXeonBotInc() {
             keepAliveIntervalMs: 10000,
         })
 
-        // Sauvegarder les identifiants lors de leur mise à jour // DEV SHADOW TECH ™
+        // Sauvegarder les identifiants lors de leur mise à jour // MUZAN TECH ™
         XeonBotInc.ev.on('creds.update', saveCreds)
 
     store.bind(XeonBotInc.ev)
 
-    // Gestion des messages // DEV SHADOW TECH ™
+    // Gestion des messages // MUZAN TECH ™
     XeonBotInc.ev.on('messages.upsert', async chatUpdate => {
         try {
             const mek = chatUpdate.messages[0]
@@ -136,27 +136,27 @@ async function startXeonBotInc() {
             }
             if (!XeonBotInc.public && !mek.key.fromMe && chatUpdate.type === 'notify') {
                 const isGroup = mek.key?.remoteJid?.endsWith('@g.us')
-                if (!isGroup) return // Bloquer les messages privés en mode privé, autoriser les groupes // DEV SHADOW TECH ™
+                if (!isGroup) return // Bloquer les messages privés en mode privé, autoriser les groupes // MUZAN TECH ™
             }
             if (mek.key.id.startsWith('BAE5') && mek.key.id.length === 16) return
 
             if (XeonBotInc?.msgRetryCounterCache) {
-                XeonBotInc.msgRetryCounterCache.clear() // Nettoyer le cache pour éviter les problèmes mémoire // DEV SHADOW TECH ™
+                XeonBotInc.msgRetryCounterCache.clear() // Nettoyer le cache pour éviter les problèmes mémoire // MUZAN TECH ™
             }
 
             try {
                 await handleMessages(XeonBotInc, chatUpdate, true)
             } catch (err) {
-                console.error("Erreur dans handleMessages :", err) // DEV SHADOW TECH ™
+                console.error("Erreur dans handleMessages :", err) // MUZAN TECH ™
                 if (mek.key && mek.key.remoteJid) {
                     await XeonBotInc.sendMessage(mek.key.remoteJid, {
-                        text: '❌ Une erreur est survenue lors du traitement de votre message.',  // DEV SHADOW TECH ™
+                        text: '❌ Une erreur est survenue lors du traitement de votre message.',  // MUZAN TECH ™
                         contextInfo: {
                             forwardingScore: 1,
                             isForwarded: true,
                             forwardedNewsletterMessageInfo: {
                                 newsletterJid: '120363402057857053@newsletter',
-                                newsletterName: '🌹𝐃𝐄𝐕 𝐒𝐇𝐀𝐃𝐎𝐖 𝐓𝐄𝐂𝐇–MD•V3🌹',
+                                newsletterName: '🌹𝐊𝚰𝐋𝐋𝚵𝚪–MD•V3🌹',
                                 serverMessageId: -1
                             }
                         }
@@ -164,11 +164,11 @@ async function startXeonBotInc() {
                 }
             }
         } catch (err) {
-            console.error("Erreur dans messages.upsert :", err) // DEV SHADOW TECH ™
+            console.error("Erreur dans messages.upsert :", err) // STIVO TECH ™
         }
     })
 
-// Décodage des JID // DEV SHADOW TECH ™
+// Décodage des JID // MUZAN TECH ™
 XeonBotInc.decodeJid = (jid) => {
     if (!jid) return jid
     if (/:\d+@/gi.test(jid)) {
@@ -180,11 +180,11 @@ XeonBotInc.decodeJid = (jid) => {
 XeonBotInc.ev.on('contacts.update', update => {
     for (let contact of update) {
         let id = XeonBotInc.decodeJid(contact.id)
-        if (store && store.contacts) store.contacts[id] = { id, name: contact.notify } // DEV SHADOW TECH ™
+        if (store && store.contacts) store.contacts[id] = { id, name: contact.notify } // MUZAN TECH ™
     }
 })
 
-// Décodage et récupération du nom (corrigé, async, optimisé) // DEV SHADOW TECH ™
+// Décodage et récupération du nom (corrigé, async, optimisé) // MUZAN TECH ™
 XeonBotInc.getName = async (jid, withoutContact = false) => {
     const id = XeonBotInc.decodeJid(jid)
     withoutContact = XeonBotInc.withoutContact || withoutContact
@@ -228,22 +228,22 @@ XeonBotInc.public = true
 
 XeonBotInc.serializeM = (m) => smsg(XeonBotInc, m, store)
 
-// Gestion du code de jumelage // DEV SHADOW TECH ™
+// Gestion du code de jumelage // MUZAN TECH ™
 if (pairingCode && !XeonBotInc.authState.creds.registered) {
-    if (useMobile) throw new Error('Impossible d’utiliser le code de jumelage avec l’API mobile') // DEV SHADOW TECH ™
+    if (useMobile) throw new Error('Impossible d’utiliser le code de jumelage avec l’API mobile') // MUZAN TECH ™
 
         let phoneNumber
         if (!!global.phoneNumber) {
             phoneNumber = global.phoneNumber
         } else {
-            phoneNumber = await question(chalk.bgBlack(chalk.greenBright(`Veuillez saisir votre numéro WhatsApp 😍\nFormat: 221769469119 (sans + ou espaces) : `))) // DEV SHADOW TECH ™
+            phoneNumber = await question(chalk.bgBlack(chalk.greenBright(`Veuillez saisir votre numéro WhatsApp 😍\nFormat: 221769469119 (sans + ou espaces) : `))) // MUZAN TECH ™
         }
 
         phoneNumber = phoneNumber.replace(/[^0-9]/g, '')
 
         const pn = require('awesome-phonenumber');
         if (!pn('+' + phoneNumber).isValid()) {
-            console.log(chalk.red('Numéro invalide. Veuillez entrer votre numéro complet international sans + ou espaces.')); // DEV SHADOW TECH ™
+            console.log(chalk.red('Numéro invalide. Veuillez entrer votre numéro complet international sans + ou espaces.')); // MUZAN TECH ™
             process.exit(1);
         }
 
@@ -251,25 +251,25 @@ if (pairingCode && !XeonBotInc.authState.creds.registered) {
             try {
                 let code = await XeonBotInc.requestPairingCode(phoneNumber)
                 code = code?.match(/.{1,4}/g)?.join("-") || code
-                console.log(chalk.black(chalk.bgGreen(`Votre code de jumelage : `)), chalk.black(chalk.white(code))) // DEV SHADOW TECH ™
-                console.log(chalk.yellow(`\nVeuillez entrer ce code dans votre application WhatsApp :\n1. Ouvrez WhatsApp\n2. Allez dans Paramètres > Appareils liés\n3. Appuyez sur "Lier un appareil"\n4. Entrez le code affiché ci-dessus`)) // DEV SHADOW TECH ™
+                console.log(chalk.black(chalk.bgGreen(`Votre code de jumelage : `)), chalk.black(chalk.white(code))) // STIVO TECH ™
+                console.log(chalk.yellow(`\nVeuillez entrer ce code dans votre application WhatsApp :\n1. Ouvrez WhatsApp\n2. Allez dans Paramètres > Appareils liés\n3. Appuyez sur "Lier un appareil"\n4. Entrez le code affiché ci-dessus`)) // STIVO TECH ™
             } catch (error) {
-                console.error('Erreur lors de la demande du code de jumelage :', error) // DEV SHADOW TECH ™
-                console.log(chalk.red('Impossible d’obtenir le code de jumelage. Vérifiez votre numéro et réessayez.')) // DEV SHADOW TECH ™
+                console.error('Erreur lors de la demande du code de jumelage :', error) // MUZAN TECH ™
+                console.log(chalk.red('Impossible d’obtenir le code de jumelage. Vérifiez votre numéro et réessayez.')) // MUZAN TECH ™
             }
         }, 3000)
     }
 
-    // Gestion des connexions // DEV SHADOW TECH ™
+    // Gestion des connexions // MUZAN TECH ™
     XeonBotInc.ev.on('connection.update', async (s) => {
         const { connection, lastDisconnect, qr } = s
         
         if (qr) {
-            console.log(chalk.yellow('📱 QR Code généré. Veuillez scanner avec WhatsApp.')) // DEV SHADOW TECH ™
+            console.log(chalk.yellow('📱 QR Code généré. Veuillez scanner avec WhatsApp.')) // MUZAN TECH ™
         }
         
         if (connection === 'connecting') {
-            console.log(chalk.yellow('🔄 Connexion à WhatsApp...')) // DEV SHADOW TECH ™
+            console.log(chalk.yellow('🔄 Connexion à WhatsApp...')) // MUZAN TECH ™
         }
         
         if (connection == "open") {
@@ -279,23 +279,23 @@ if (pairingCode && !XeonBotInc.authState.creds.registered) {
             try {
                 const botNumber = XeonBotInc.user.id.split(':')[0] + '@s.whatsapp.net';
                 await XeonBotInc.sendMessage(botNumber, {
-    text: `🚀 Le bot est opérationnel !\n\n🕒 Heure actuelle : ${new Date().toLocaleString()}\n✅ Statut : En ligne et fonctionnel !\n\n🔔 N'oubliez pas de rejoindre notre canal ci-dessous !`, // DEV SHADOW TECH ™
+    text: `🚀 Le bot est opérationnel !\n\n🕒 Heure actuelle : ${new Date().toLocaleString()}\n✅ Statut : En ligne et fonctionnel !\n\n🔔 N'oubliez pas de rejoindre notre canal ci-dessous !`, // MUZAN TECH ™
                     contextInfo: {
                         forwardingScore: 1,
                         isForwarded: true,
                         forwardedNewsletterMessageInfo: {
                             newsletterJid: '120363402057857053@newsletter',
-                            newsletterName: '🌹𝐃𝐄𝐕 𝐒𝐇𝐀𝐃𝐎𝐖 𝐓𝐄𝐂𝐇–MD•V3🌹',
+                            newsletterName: '🌹𝐊𝚰𝐋𝐋𝚵𝚪–MD•V3🌹',
                             serverMessageId: -1
                         }
                     }
                 });
             } catch (error) {
-                console.error('Erreur lors de l’envoi du message de connexion :', error.message) // DEV SHADOW TECH ™
+                console.error('Erreur lors de l’envoi du message de connexion :', error.message) // MUZAN TECH ™
             }
 
             await delay(1999)
-            console.log(chalk.yellow(`\n\n                  ${chalk.bold.blue(`[ ${global.botname || '🌹𝐃𝐄𝐕 𝐒𝐇𝐀𝐃𝐎𝐖 𝐓𝐄𝐂𝐇–MD•V3🌹'} ]`)}\n\n`))
+            console.log(chalk.yellow(`\n\n                  ${chalk.bold.blue(`[ ${global.botname || '🌹𝐊𝚰𝐋𝐋𝚵𝚪–MD•V3🌹'} ]`)}\n\n`))
             console.log(chalk.cyan(`
 < ================================================== >
 
@@ -308,46 +308,46 @@ if (pairingCode && !XeonBotInc.authState.creds.registered) {
                                                 
 < ================================================== >
 `))
-            console.log(chalk.magenta(`\n${global.themeemoji || '•'} YOUTUBE CHANNEL: DEV SHADOW TECH`))
-            console.log(chalk.magenta(`${global.themeemoji || '•'} GITHUB: DEV-SHADOW`))
-            let ownerData = JSON.parse(fs.readFileSync('./data/owner.json')) // DEV SHADOW TECH ™
+            console.log(chalk.magenta(`\n${global.themeemoji || '•'} YOUTUBE CHANNEL: MR_MUZAN_TECH`))
+            console.log(chalk.magenta(`${global.themeemoji || '•'} GITHUB: MUZAN-DEV`))
+            let ownerData = JSON.parse(fs.readFileSync('./data/owner.json')) // MUZAN TECH ™
 let ownerNumber = Array.isArray(ownerData) ? (ownerData[0]?.number || ownerData[0]) : (ownerData.number || ownerData)
 if (typeof ownerNumber === 'object') ownerNumber = String(ownerNumber)
-const ownerJid = (ownerNumber || phoneNumber) + '@s.whatsapp.net' // DEV SHADOW TECH ™
+const ownerJid = (ownerNumber || phoneNumber) + '@s.whatsapp.net' // MUZAN TECH ™
 
-console.log(chalk.magenta(`• OWNER NUMBER: ${ownerNumber}`)) // DEV SHADOW TECH ™
-            console.log(chalk.magenta(`${global.themeemoji || '•'} CREDIT: DEV SHADOW TECH`))
+console.log(chalk.magenta(`• OWNER NUMBER: ${ownerNumber}`)) // MUZAN TECH ™
+            console.log(chalk.magenta(`${global.themeemoji || '•'} CREDIT: MR_MUZAN_TECH`))
             console.log(chalk.green(`${global.themeemoji || '•'} 🤖 Bot connecté avec succès ! ✅`))
-            console.log(chalk.blue(`Version du bot: ${settings.version}`)) // DEV SHADOW TECH ™
+            console.log(chalk.blue(`Version du bot: ${settings.version}`)) // MUZAN TECH ™
         }
       if (connection === 'close') {
             const shouldReconnect = (lastDisconnect?.error)?.output?.statusCode !== DisconnectReason.loggedOut
             const statusCode = lastDisconnect?.error?.output?.statusCode
             
-            console.log(chalk.red(`Connexion fermée à cause de ${lastDisconnect?.error}, reconnexion ${shouldReconnect}`)) // DEV SHADOW TECH ™
+            console.log(chalk.red(`Connexion fermée à cause de ${lastDisconnect?.error}, reconnexion ${shouldReconnect}`)) // MUZAN TECH ™
             
             if (statusCode === DisconnectReason.loggedOut || statusCode === 401) {
                 try {
                     rmSync('./session', { recursive: true, force: true })
-                    console.log(chalk.yellow('Dossier de session supprimé. Veuillez vous réauthentifier.')) // DEV SHADOW TECH ™
+                    console.log(chalk.yellow('Dossier de session supprimé. Veuillez vous réauthentifier.')) // MUZAN TECH ™
                 } catch (error) {
-                    console.error('Erreur lors de la suppression de la session :', error) // DEV SHADOW TECH ™
+                    console.error('Erreur lors de la suppression de la session :', error) // MUZAN TECH ™
                 }
-                console.log(chalk.red('Session déconnectée. Veuillez vous réauthentifier.')) // DEV SHADOW TECH ™
+                console.log(chalk.red('Session déconnectée. Veuillez vous réauthentifier.')) // MUZAN TECH ™
             }
             
             if (shouldReconnect) {
-                console.log(chalk.yellow('Reconnexion...')) // DEV SHADOW TECH ™
+                console.log(chalk.yellow('Reconnexion...')) // MUZAN TECH ™
                 await delay(5000)
                 startXeonBotInc()
             }
         }
     })
 
-    // Suivi des appels récents pour éviter le spam // DEV SHADOW TECH ™
+    // Suivi des appels récents pour éviter le spam // MUZAN TECH ™
     const antiCallNotified = new Set();
 
-    // Gestion anti-call : bloquer les appelants si activé // DEV SHADOW TECH ™
+    // Gestion anti-call : bloquer les appelants si activé // MUZAN TECH ™
     XeonBotInc.ev.on('call', async (calls) => {
         try {
             const { readState: readAnticallState } = require('./commands/anticall');
@@ -357,7 +357,7 @@ console.log(chalk.magenta(`• OWNER NUMBER: ${ownerNumber}`)) // DEV SHADOW TEC
                 const callerJid = call.from || call.peerJid || call.chatId;
                 if (!callerJid) continue;
                 try {
-                    // Première étape : tenter de rejeter l’appel si possible // DEV SHADOW TECH ™
+                    // Première étape : tenter de rejeter l’appel si possible // MUZAN TECH ™
                     try {
                         if (typeof XeonBotInc.rejectCall === 'function' && call.id) {
                             await XeonBotInc.rejectCall(call.id, callerJid);
@@ -366,67 +366,67 @@ console.log(chalk.magenta(`• OWNER NUMBER: ${ownerNumber}`)) // DEV SHADOW TEC
                         }
                     } catch {}
 
-                    // Notifier l’appelant une seule fois dans une courte période // DEV SHADOW TECH ™
+                    // Notifier l’appelant une seule fois dans une courte période // MUZAN TECH ™
                     if (!antiCallNotified.has(callerJid)) {
                         antiCallNotified.add(callerJid);
                         setTimeout(() => antiCallNotified.delete(callerJid), 60000);
-                        await XeonBotInc.sendMessage(callerJid, { text: '📵 Anti-call activé. Votre appel a été rejeté et vous serez bloqué.' });  // DEV SHADOW TECH ™
+                        await XeonBotInc.sendMessage(callerJid, { text: '📵 Anti-call activé. Votre appel a été rejeté et vous serez bloqué.' });  // MUZAN TECH ™
                     }
                 } catch {}
-                // Puis : bloquer après un court délai pour s’assurer que le rejet et le message sont traités // DEV SHADOW TECH ™
+                // Puis : bloquer après un court délai pour s’assurer que le rejet et le message sont traités // MUZAN TECH ™
                 setTimeout(async () => {
                     try { await XeonBotInc.updateBlockStatus(callerJid, 'block'); } catch {}
                 }, 800);
             }
         } catch (e) {
-            // ignorer // DEV SHADOW TECH ™
+            // ignorer // MUZAN TECH ™
         }
     });
 
     XeonBotInc.ev.on('group-participants.update', async (update) => {
-        await handleGroupParticipantUpdate(XeonBotInc, update); // DEV SHADOW TECH ™
+        await handleGroupParticipantUpdate(XeonBotInc, update); // MUZAN TECH ™
     });
 
     XeonBotInc.ev.on('messages.upsert', async (m) => {
         if (m.messages[0].key && m.messages[0].key.remoteJid === 'status@broadcast') {
-            await handleStatus(XeonBotInc, m); // DEV SHADOW TECH ™
+            await handleStatus(XeonBotInc, m); // MUZAN TECH ™
         }
     });
 
     XeonBotInc.ev.on('status.update', async (status) => {
-        await handleStatus(XeonBotInc, status); // DEV SHADOW TECH ™
+        await handleStatus(XeonBotInc, status); // MUZAN TECH ™
     });
 
     XeonBotInc.ev.on('messages.reaction', async (status) => {
-        await handleStatus(XeonBotInc, status); // DEV SHADOW TECH ™
+        await handleStatus(XeonBotInc, status); // MUZAN TECH ™
     });
 
     return XeonBotInc
     } catch (error) {
-        console.error('Erreur dans startXeonBotInc :', error) // DEV SHADOW TECH ™
+        console.error('Erreur dans startXeonBotInc :', error) // MUZAN TECH ™
         await delay(5000)
         startXeonBotInc()
     }
 }
 
 
-// Démarrage du bot avec gestion des erreurs // DEV SHADOW TECH ™
+// Démarrage du bot avec gestion des erreurs // MUZAN TECH ™
 startXeonBotInc().catch(error => {
-    console.error('Erreur fatale :', error)// DEV SHADOW TECH ™
+    console.error('Erreur fatale :', error)// MUZAN TECH ™
     process.exit(1)
 })
 process.on('uncaughtException', (err) => {
-    console.error('Exception non interceptée :, err) // DEV SHADOW TECH ™
+    console.error('Exception non interceptée :', err) // MUZAN TECH ™
 })
 
 process.on('unhandledRejection', (err) => {
-    console.error('Rejet non géré :', err) // DEV SHADOW TECH ™
+    console.error('Rejet non géré :', err) // MUZAN TECH ™
 })
 
 let file = require.resolve(__filename)
 fs.watchFile(file, () => {
     fs.unwatchFile(file)
-    console.log(chalk.redBright(`Mise à jour de ${__filename}`)) // DEV SHADOW TECH ™
+    console.log(chalk.redBright(`Mise à jour de ${__filename}`)) // MUZAN TECH ™
     delete require.cache[file]
     require(file)
 })
